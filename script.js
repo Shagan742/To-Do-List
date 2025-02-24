@@ -10,7 +10,7 @@ document.getElementById("addTaskBtn").addEventListener("click", function(){
 // if user puts in something in the input box, whatever they put in goes in the tasks array
     if (taskInput) {
         tasks.push(taskInput);
-        document.getElementById("taskInput").value= ' ';
+        document.getElementById("taskInput").value= '';
        
 //display whatever user put in below with a checkbox
     displayTasks() 

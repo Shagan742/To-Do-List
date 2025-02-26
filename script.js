@@ -12,7 +12,47 @@ document.getElementById("addTaskBtn").addEventListener("click", function(){
         tasks.push(taskInput);
         document.getElementById("taskInput").value= '';
        
-//display whatever user put in below with a checkbox
-    displayTasks() 
+        displayTasks();
     }
 })
+
+//display whatever user put in below with a checkbox
+function displayTasks() {
+    //this grabs unordered list from html
+    let taskList=document.getElementById("taskList");
+
+    //clear whatever's inside of it
+    taskList.innerHTML='';
+
+    //loop thru each task in array
+    tasks.forEach((task, index) => {
+        //save list element as variable
+        let li=document.createElement("li");
+
+        //adds bootstrap classes to try and style it
+        li.classList.add(
+            "list-group-item",
+            "d-flex",
+            "justify-content-between",
+            "align-items-center"
+        )
+
+
+        //set innerHTML of li element w/ task list n remove button
+        li.innerHTML=`${task} <button class="btn btn-dark btn-sm" onclick="removeTask(${index})"> √ </button`;       
+
+        //append new task to tasklist
+        taskList.appendChild(li);
+    })
+}
+
+
+
+//time to remove the tasks
+function removeTask(index) {
+    //remove task at given index from array
+    tasks.splice(index,1);
+
+    //call function to update task list display
+    displayTasks();
+}

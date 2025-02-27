@@ -56,3 +56,10 @@ function removeTask(index) {
     //call function to update task list display
     displayTasks();
 }
+
+//get the clear task list button to make it do things
+document.getElementById("clearTaskBtn").addEventListener("click", function() {
+    //turn the tasks array empty and call the function
+    tasks=[];
+    displayTasks();
+})

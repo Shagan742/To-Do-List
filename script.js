@@ -16,6 +16,21 @@ document.getElementById("addTaskBtn").addEventListener("click", function(){
     }
 })
 
+//make people add tasks by pressing enter instead of going outta their way to press the button
+document.getElementById("taskInput").addEventListener("keydown", function() {
+
+    //whatever user puts in is saved as a variable
+    let taskInput=document.getElementById("taskInput").value;
+
+// if user puts in something in the input box, whatever they put in goes in the tasks array by pressing enter
+    if (taskInput) {
+        tasks.push(taskInput);
+        document.getElementById("taskInput").value= '';
+       
+        displayTasks();
+    }
+})
+
 //display whatever user put in below with a checkbox
 function displayTasks() {
     //this grabs unordered list from html

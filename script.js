@@ -17,13 +17,13 @@ document.getElementById("addTaskBtn").addEventListener("click", function(){
 })
 
 //make people add tasks by pressing enter instead of going outta their way to press the button
-document.getElementById("taskInput").addEventListener("keydown", function() {
+document.getElementById("taskInput").addEventListener("keydown", function(event) {
 
     //whatever user puts in is saved as a variable
-    let taskInput=document.getElementById("taskInput").value;
+    let taskInput = document.getElementById("taskInput").value;
 
 // if user puts in something in the input box, whatever they put in goes in the tasks array by pressing enter
-    if (taskInput) {
+    if (event.key === 'Enter') {
         tasks.push(taskInput);
         document.getElementById("taskInput").value= '';
        

@@ -52,13 +52,26 @@ function displayTasks() {
             "align-items-center"
         )
 
-
         //set innerHTML of li element w/ task list n remove button
         li.innerHTML=`${task} <button class="btn btn-dark btn-sm" onclick="removeTask(${index})"> √ </button`;       
 
         //append new task to tasklist
         taskList.appendChild(li);
+
     })
+}
+
+
+//initially 0 tasks
+let totalTasksNumber=document.getElementById('totalTasksNumber').innerHTML;
+
+//function to count tasks
+function showTasksNumber() {
+    for (let totalTasksNumber=0; totalTasksNumber<100; totalTasksNumber++) {
+        if(appendChild(li)) {
+            totalTasksNumber++;
+        }
+    }
 }
 
 

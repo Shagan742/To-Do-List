@@ -19,15 +19,69 @@ body {
 }
 
 #addTaskBtn {
-    background-color: green;
+    background-color: rgb(111, 183, 91);
+    color:white;
+    font-family: "Yuji Mai", serif;
+        font-weight: 400;
+        font-style: normal;
+        border:2px solid white;
+}
+
+#addTaskBtn:hover {
+    background-color:rgba(111, 183, 91, 0.4);
+    color:black;
 }
 
 #clearTaskBtn {
-    background-color: red;
+    background-color: rgb(183, 91, 118);
+    color:white;
+    font-family: "Yuji Mai", serif;
+    font-weight: 400;
+    font-style: normal;
+    border:2px solid white;
+
+}
+
+#clearTaskBtn:hover {
+    background-color:rgba(183, 91, 118, 0.4);
+    color:black;
+}
+
+#taskInput {
+    color:black;
+    padding-left:10px;
+    height:40px;
+    border-radius:10px;
+    font-family: "Madimi One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#checkMark {
+    background-color: rgb(89, 168, 89);
+    color:white;
+    font-weight:700;
+    font-size:15px;
+}
+
+#checkMark:hover {
+    background-color: rgba(89, 168, 89, 0.4);
+    color:black;
+}
+
+li {
+    font-family: "Madimi One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color:black;
+
 }
 
 
 #totalTaskss, #totalTasksNumber {
     font-size:30px;
     color:rgb(0, 66, 0);
+    font-family: "Yuji Mai", serif;
+    font-weight: 400;
+    font-style: normal;
 }

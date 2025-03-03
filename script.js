@@ -31,6 +31,18 @@ document.getElementById("taskInput").addEventListener("keydown", function(event)
     }
 })
 
+
+//initially 0 tasks
+let totalTasksNumber=document.getElementById('totalTasksNumber').innerHTML=0;
+
+function incTasks() {
+    //change the variable to have amt of tasks that the array stored
+    totalTasksNumber=tasks.length;
+
+    //put it in the html the newly edited variable
+    document.getElementById('totalTasksNumber').innerHTML=totalTasksNumber;
+}
+
 //display whatever user put in below with a checkbox
 function displayTasks() {
     //this grabs unordered list from html
@@ -58,22 +70,12 @@ function displayTasks() {
         //append new task to tasklist
         taskList.appendChild(li);
 
+
+        incTasks();
+
+
     })
 }
-
-
-//initially 0 tasks
-let totalTasksNumber=document.getElementById('totalTasksNumber').innerHTML;
-
-//function to count tasks
-function showTasksNumber() {
-    for (let totalTasksNumber=0; totalTasksNumber<100; totalTasksNumber++) {
-        if(appendChild(li)) {
-            totalTasksNumber++;
-        }
-    }
-}
-
 
 
 //time to remove the tasks
@@ -83,6 +85,9 @@ function removeTask(index) {
 
     //call function to update task list display
     displayTasks();
+
+    //call function to display amt of tasks
+    incTasks();
 }
 
 //get the clear task list button to make it do things
@@ -90,4 +95,8 @@ document.getElementById("clearTaskBtn").addEventListener("click", function() {
     //turn the tasks array empty and call the function
     tasks=[];
     displayTasks();
+
+    //call function to display amt of tasks
+    incTasks();
 })
+
